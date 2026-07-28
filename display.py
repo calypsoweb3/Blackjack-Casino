@@ -13,6 +13,8 @@ def show_some(dealer_hand, player_hand):
     print()
     for card in player_hand.cards:
         print(card)
+    print()
+    print(f"Card's value: {player_hand.value}")
 def show_all(dealer_hand, player_hand):
     print()
     print('=' * 20)
@@ -22,12 +24,16 @@ def show_all(dealer_hand, player_hand):
     for card in dealer_hand.cards:
         print(card)
     print()
+    print(f"Card's value: {dealer_hand.value}")
+    print()
     print('=' * 20)
     print("   Player's Hand")
     print('=' * 20)
     print()
     for card in player_hand.cards:
         print(card)
+    print()
+    print(f"Card's value: {player_hand.value}")
 def player_busts(chips):
     print()
     print('=' * 30)

@@ -1,7 +1,6 @@
 from validators import string_validator, integer_validator, float_validator
 from game import blackjack
 from chips import Chips
-chips = Chips(1000)
 def intro():
     print()
     print("GAME RULES")

@@ -28,6 +28,11 @@ def blackjack(chips):
     deck.shuffle()
     player_hand = Hand()
     dealer_hand = Hand()
+    if chips.total <= 0:
+        print()
+        print('You have no chips to play with')
+        print('Please reset your wallet to continue playing')
+        return
     take_bets(chips)
     for num in range(2):
         player_hand.add_card(deck.deal())
@@ -51,9 +56,8 @@ def blackjack(chips):
         print('BLACKJACK')
         dealer_wins(chips)
         return
-    while playing:
-        if hit_or_stand(deck, player_hand):
-            show_some(dealer_hand, player_hand)
+    while hit_or_stand(deck, player_hand):
+        show_some(dealer_hand, player_hand)
         if player_hand.value < 17:
             hit_or_stand(deck, player_hand)
             show_some(dealer_hand, player_hand)
